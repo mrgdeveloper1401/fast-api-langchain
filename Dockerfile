@@ -13,3 +13,5 @@ RUN apk update && \
     chown -R 755 chain:chain /home/app
 
 USER lang
+
+ENTRYPOINT ["uvicorn", "--reload", "main:app"]
